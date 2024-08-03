@@ -11,7 +11,8 @@ const Home = () => {
 
     return (
         <div className='home'>
-            <BlogList blogs={blogs} title={'All blogs!'} /> {/* reusable component with prop */}
+            <BlogList blogs={blogs} title='All blogs!' /> {/* reusable component with prop */}
+            <BlogList blogs={blogs.filter((blog) => blog.author === 'Mario')} title="Mario's blogs" />
         </div>
     );
 }
